@@ -9,7 +9,7 @@ This document outlines the step-by-step process used to integrate Zoho People AP
 1. Log in to Zoho API Console.
 2. Select **Self Client**.
 3. Add required scope: ZohoPeople.forms.READ
-4. Generate a **Grant Token**.
+4. Generate a **Grant Token** (Code).
 5. Exchange the Grant Token for a **Refresh Token**.
 6. Save:
    - Client ID
