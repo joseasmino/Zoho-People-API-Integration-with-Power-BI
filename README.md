@@ -71,3 +71,66 @@ This ensures:
 
 API Endpoint Used:
 https://people.zoho.in/people/api/forms/P_Employee/getRecords
+
+---
+
+Current implementation retrieves the first 100 employee records (pagination intentionally excluded for Phase 1 validation).
+
+---
+
+## ⚙️ Power BI Configuration
+
+### Power BI Desktop
+- Authentication Type: **Anonymous**
+- Privacy Level: **Organizational**
+
+### Power BI Service
+- Set both Zoho endpoints to:
+  - Authentication: Anonymous
+  - Privacy Level: Organizational
+- Scheduled Refresh enabled
+
+---
+
+## 🚧 Issues Resolved During Implementation
+
+- Region mismatch errors
+- Incorrect API endpoint path
+- Role-based API restrictions
+- HTTP 400 errors from URL concatenation
+- Privacy firewall conflicts
+- Empty dataset handling
+
+All issues were resolved and documented during development.
+
+---
+
+## ✅ Current Status
+
+- OAuth flow fully operational
+- Employee data successfully retrieved
+- Cloud refresh compatible
+- No gateway required
+- Production-ready architecture foundation established
+
+---
+
+## 🔐 Security Considerations
+
+- Credentials should not be stored in source control
+- Refresh Tokens should be rotated periodically
+- Secure storage recommended for production deployment
+
+---
+
+## 🚀 Next Enhancements (Optional)
+
+- Implement pagination for large datasets
+- Add incremental refresh
+- Parameterize credentials
+- Convert to Server-Based OAuth for production
+
+---
+
+**Status:** Successfully implemented and validated.
+
