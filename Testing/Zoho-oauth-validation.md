@@ -26,3 +26,15 @@ The objective was to confirm:
 ```python
 import requests
 import pandas as pd
+
+
+url = "https://accounts.zoho.in/oauth/v2/token"
+params = {
+    "grant_type": "authorization_code",
+    "client_id": "",
+    "client_secret": "",
+    "code": ""
+}
+
+response = requests.post(url, params=params)
+print(response.json())
