@@ -8,9 +8,9 @@ Do NOT store real credentials in production.
 let
     // 1. Setup (Keep your existing working credentials)
     BaseUrl = "https://people.zoho.in/", 
-    ClientID = "1000.F9PNFSYETZFN0PFQ5JMQ2QE724D51X",
-    ClientSecret = "dddbd5418ebdcd66f2300902ad5386e327568e0018",
-    RefreshToken = "1000.f1c159cd05aae90be6292a7de5595da9.1ae00deba6826d5c23988a0c749fc25b",
+    ClientID = "",
+    ClientSecret = "",
+    RefreshToken = "",
 
     // 2. Token Generation (POST)
     TokenResponse = Json.Document(Web.Contents("https://accounts.zoho.in/oauth/v2/token", [
