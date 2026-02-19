@@ -1,5 +1,48 @@
 # Python Script with Pagination
 
+
+```python
+import requests
+import pandas as pd
+```
+
+
+```python
+url = "https://accounts.zoho.in/oauth/v2/token"
+params = {
+    "grant_type": "authorization_code",
+    "client_id": "",
+    "client_secret": "",
+    "code": ""
+}
+
+response = requests.post(url, params=params)
+print(response.json())
+```
+
+
+```python
+token_url = "https://accounts.zoho.in/oauth/v2/token"
+token_params = {
+    "refresh_token": "",
+    "client_id": "",
+    "client_secret": "",
+    "grant_type": "refresh_token"
+}
+
+access_token = requests.post(token_url, params=token_params).json().get("access_token")
+access_token
+```
+
+
+```python
+api_url = "https://people.zoho.in/people/api/forms/P_Employee/getRecords"
+
+headers = {"Authorization": f"Zoho-oauthtoken {access_token}"}
+api_params = {"start": 1, "limit": 100}
+```
+
+
 ```python
 all_records = []
 start = 1
